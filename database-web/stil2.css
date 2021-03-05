@@ -1,0 +1,40 @@
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    font-size: 12pt;
+}
+
+.menu {
+    background-color: rgba(0, 0, 0, 0.78);
+    list-style: none;
+    line-height: 30px;
+    height: 100%;
+    border-bottom: 1px solid black;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 20%;
+}
+
+.menu li {
+    margin-right: 0px;
+}
+
+.menu li a {
+    text-decoration: none;
+    display: block;
+    padding: 2px 10px;
+    color: white;
+}
+
+.menu li a:hover {
+    color: rgb(6, 175, 226);
+    background-color: rgba(0, 0, 0, 0.99);
+    transition: all ease-in 0.0s;
+    border-bottom: 1px solid rgb(6, 175, 226);
+}
+
+.container {
+    position: relative;
+}

@@ -1,0 +1,43 @@
+* {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  font-size: 12pt;
+}
+
+.menu {
+  list-style: none;
+  line-height: 30px;
+  height: 100%;
+  border-bottom: 1px solid gray;
+  position: relative;
+
+  width: 100%;
+}
+
+.menu li {
+  margin-right: 0px;
+}
+
+.menu li a {
+  text-decoration: none;
+  display: block;
+  padding: 2px;
+  color: white;
+  padding-left: 12px;
+}
+.menu li a i {
+  padding-right: 8px;
+}
+
+.menu li a:hover {
+  color: rgb(6, 175, 226);
+  background-color: rgba(0, 0, 0, 0.99);
+  transition: all ease-in 0s;
+  border-left: 5px solid rgb(6, 175, 226);
+}
+
+.container {
+  position: relative;
+}

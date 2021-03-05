@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>CodeMirror: SQL Mode for CodeMirror</title>
+
+  <link rel="stylesheet" href="./code-mirror-files/docs.css">
+
+  <link rel="stylesheet" href="./code-mirror-files/codemirror.css">
+  <script src="./code-mirror-files/codemirror.js"></script>
+  <script src="./code-mirror-files/matchbrackets.js"></script>
+  <script src="./code-mirror-files/sql.js"></script>
+  <link rel="stylesheet" href="./code-mirror-files/show-hint.css">
+  <script src="./code-mirror-files/show-hint.js"></script>
+  <script src="./code-mirror-files/sql-hint.js"></script>
+  <style>
+    .CodeMirror {
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+
+  <form>
+    <textarea id="code" name="code" style="display: none;">
+      -- SQL Mode for CodeMirror
+      SELECT SQL_NO_CACHE DISTINCT
+
+  </textarea>
+    <script>
+      window.onload = function () {
+        var mime = 'text/x-mariadb';
+        // get mime type
+        if (window.location.href.indexOf('mime=') > -1) {
+          mime = window.location.href.substr(window.location.href.indexOf('mime=') + 5);
+        }
+        window.editor = CodeMirror.fromTextArea(document.getElementById('code'), {
+          mode: mime,
+          indentWithTabs: true,
+          smartIndent: true,
+          lineNumbers: true,
+          matchBrackets: true,
+          autofocus: true,
+          extraKeys: { "Ctrl-Space": "autocomplete" },
+          hintOptions: {
+            tables: {
+              users: ["name", "score", "birthDate"],
+              countries: ["name", "population", "size"]
+            }
+          }
+        });
+      };
+    </script>
+
+</body>
+
+</html>
